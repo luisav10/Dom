@@ -89,7 +89,7 @@ function partyBackground() {
 
 // Lógica para criar e animar um único lote de confetes
 function createConfettiDrop() {
-    const confettiCount = 50; // Diminuído um pouco para evitar sobrecarga excessiva de elementos
+    const confettiCount = 150; // AUMENTADO: Mais confetes por lote
     const bodyWidth = document.body.clientWidth;
 
     for (let i = 0; i < confettiCount; i++) {
@@ -132,8 +132,8 @@ function startConfettiRain() {
     // Cria o primeiro lote imediatamente
     createConfettiDrop();
 
-    // Continua criando lotes a cada 1.5 segundos
-    confettiInterval = setInterval(createConfettiDrop, 1500);
+    // Continua criando lotes a cada 500ms (AGORA MAIS FREQUENTE)
+    confettiInterval = setInterval(createConfettiDrop, 500);
 }
 
 
